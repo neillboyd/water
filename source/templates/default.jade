@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', href='/css/index.css')
+    title WATER - version 0.1
+  body
+    .header
+      h1.page-title WATER - version 0.1
+
+    ul.nav
+      li: a(href='/') Home
+      li: a(href='#news') News
+      li: a(href='#about') About
+      li: a(href='#contact') Contact
+
+    .main-content
+      block content
+
+    .footer
+      p No copyright notice. You can do whatever you wish with this.

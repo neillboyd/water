@@ -1,0 +1,37 @@
+{
+  "name": "water",
+  "version": "0.0.1",
+  "description": "Web Automation Test Example Repository",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "stylus source/stylesheets/index.styl -o static/css",
+    "watch-css": "stylus source/stylesheets/index.styl -o static/css -w",
+    "clean": "rm -rf static/css && mkdir -p static/css",
+    "build": "npm run clean && npm run build-css",
+    "watch": "npm run clean && npm run watch-css & nodemon server -e js,jade",
+    "start": "node server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neillboyd/water.git"
+  },
+  "keywords": [
+    "selenium",
+    "test",
+    "example",
+    "automation"
+  ],
+  "author": "Neill Boyd",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/neillboyd/water/issues"
+  },
+  "homepage": "https://github.com/neillboyd/water#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "jade": "^1.11.0",
+    "morgan": "^1.7.0",
+    "nodemon": "^1.9.1",
+    "stylus": "^0.54.5"
+  }
+}
