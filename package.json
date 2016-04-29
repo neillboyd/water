@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/neillboyd/water#readme",
   "dependencies": {
+    "basic-auth": "^1.0.3",
     "express": "^4.13.4",
     "jade": "^1.11.0",
     "morgan": "^1.7.0",
