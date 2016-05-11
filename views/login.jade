@@ -1,0 +1,17 @@
+extend default
+
+block content
+  p
+    | welcome to
+    b  water
+    | , please login with your credentials:
+
+  form(name="login-form", action="/authenticate", method="get")
+    div.input
+      span.label Username
+        input(type="text", name="username")
+    div.input
+      span.label Password
+        input(type="password", name="password")
+    div.actions
+        input(type="submit", value="Login")
