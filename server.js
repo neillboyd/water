@@ -27,6 +27,31 @@ app.get('/credit', function (req, res, next) {
 
 app.get('/login', function(req, res, next){
   try {
+    res.render('login')
+  } catch(e) {
+    next(e)
+  }
+})
+
+app.get('/authenticate', function(req, res, next){
+  try{
+    if (req.query.username != 'admin' || req.query.password != 'password')
+    {
+      res.statusCode = 401;
+      //res.setHeader('WWW-Authenticate', 'Basic realm="example"')
+      res.end('Access denied')
+    }
+    else {
+      res.end('Access Granted!')
+    }
+  } catch(e) {
+    next(e)
+  }
+})
+
+app.get('/login_basic', function(req, res, next){
+  try {
+
     credentials = auth(req);
     if (!credentials || credentials.name !=='admin' || credentials.pass !== 'password')
     {
